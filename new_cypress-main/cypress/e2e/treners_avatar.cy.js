@@ -3,8 +3,8 @@ describe('покупка нового аватара для своего тре�
      it('Покупка аватара', function () {
         cy.visit('https://pokemonbattle.ru/login');// зашли на сайт
         cy.wait(3000);
-        cy.get('#k_email').type('Zaharchik15011991@yandex.ru');// ввели верный логин
-        cy.get('#k_password').type('Deniska2016');// ввели верный пароль
+        cy.get('#k_email').type('email');// ввели верный логин
+        cy.get('#k_password').type('password');// ввели верный пароль
         cy.get('.MuiButton-root').click();// нажал войти
         cy.wait(3000);
         cy.get('.header_card_trainer').click();// нажал на тренера
@@ -24,5 +24,6 @@ describe('покупка нового аватара для своего тре�
         cy.get('.payment_status_back').click();// нажал вернуться на страницу тренера
 
     })
+
 
 })
